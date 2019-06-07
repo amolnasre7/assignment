@@ -1,0 +1,63 @@
+<!-- <table class="table">
+  <tr class="thead bg-info">
+    <th>ID</th>
+    <th>NAME</th>
+    <th>EMAIL ID</th>
+  </tr>
+    <tr *ngFor="let emp of employees">
+      <td>{{emp.id}}</td>
+      <td>{{emp.name}}</td>
+      <td>{{emp.email}}</td>
+    </tr>
+</table> -->
+<div class="container ">
+<div class="card" (click)="onSelect(emp)" class="curserpointer" *ngFor="let emp of employees">
+<div class="card-header bg-info">
+ <h3 class="card-title ">{{emp.name|uppercase}}</h3>
+</div>
+<div class="card-body">
+  <div class="col-sm-10">
+    <div class="row">
+      <div class="col-sm-4">
+<img class="imageClass" [src]="emp.photoPath">
+      </div>
+
+      <div class="col-xs-8">
+        <div class="row">
+          <div class="col-xs-6">
+
+        Employee Id
+          </div>
+          <div class="col-xs-6">
+
+          : {{emp.id}}
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+  
+          Employee Email Id
+            </div>
+            <div class="col-xs-6">
+  
+            : {{emp.emailid}}
+              </div>
+  
+          </div>
+      </div>
+     
+            </div>
+
+        </div>
+      
+
+ 
+
+    
+
+  
+
+</div>
+</div>
+</div>
